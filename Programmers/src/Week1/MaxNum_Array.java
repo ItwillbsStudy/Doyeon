@@ -16,6 +16,16 @@ public class MaxNum_Array {
 			if(max == max2) max2 = m;
 		}
 		return max * max2;
+		
+//		int max = numbers[0];
+//              int max2 = numbers[0];
+//              for(int i = 1; i < numbers.length; i++) {
+//                      if(numbers[i] > max) {
+//                              max = numbers[i];
+//                      }else {
+//                      	if(numbers[i] > max2) max2 = numbers[i];
+//          		}
+//       	 } return max * max2;
 	}
 }
 
