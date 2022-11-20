@@ -1,6 +1,7 @@
 package week4;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class UphillRoad {
 
@@ -20,10 +21,18 @@ public class UphillRoad {
 		 * 첫째 줄에 가장 큰 오르막길의 크기를 출력한다. 
 		 * 만약 오르막길이 없는 경우에는 0을 출력
 		 */
-		//파라미터
-		int n = 8;
-		int[] path = {12, 20, 1, 3, 4, 4, 11, 1};
 		
+		Scanner sc = new Scanner(System.in);
+		//파라미터
+//		int n = sc.nextInt();
+//		int[] path = new int [n];
+//		
+//		for(int i = 0; i < path.length; i ++) {
+//			path[i] = sc.nextInt();
+//		}
+		
+		int n = 8;
+		int[] path = {12, 3, 5, 7, 10, 6, 1, 11};
 		//path[0] - path[1]의 값이 -인 경우 오르막길
 		//						 +인 경우 내리막길
 		//						 0인 경우 평지
@@ -45,6 +54,7 @@ public class UphillRoad {
 				continue;
 			}
 		}
+		slope.add(answer);
 		
 		//slope배열에는 여러개의 오르막길 경사도가 들어가있다.
 		//배열의 값을 비교하여 가장 큰 경사도를 가진 데이터를 max에 넣어준다.
@@ -52,7 +62,7 @@ public class UphillRoad {
 		for(int i = 1; i < slope.size(); i++) {
 			if(max < slope.get(i)) max = slope.get(i);
 		}
-		System.out.println(max);
+//		System.out.println(max);
 		
 	}
 
