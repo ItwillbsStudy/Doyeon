@@ -26,11 +26,11 @@ public class Marble {
 			//조건: balls > (balls-share)
 			//그거를 share로 나눔
 			for(int i = balls; i > (balls-share); i--){
-				BigInteger index = new BigInteger("i");
+				BigInteger index = new BigInteger(String.valueOf(i));
 				ballsp = ballsp.multiply(index);
 			}
 			for(int i = share; i > 0; i--) {
-				BigInteger index = new BigInteger("i");
+				BigInteger index = new BigInteger(String.valueOf(i));
 				sharep = sharep.multiply(index);
 			}
 			answer = ballsp.divide(sharep);
@@ -38,11 +38,11 @@ public class Marble {
 			//조건: balls > share
 			//그거를 balls-share로 나눔
 			for(int i = balls; i > share; i--){
-				BigInteger index = new BigInteger("i");
+				BigInteger index = new BigInteger(String.valueOf(i));
 				ballsp = ballsp.multiply(index);
 			}
 			for(int i = (balls-share); i > 0; i--) {
-				BigInteger index = new BigInteger("i");
+				BigInteger index = new BigInteger(String.valueOf(i));
 				bmsp = bmsp.multiply(index);
 			}
 			answer = ballsp.divide(bmsp);
